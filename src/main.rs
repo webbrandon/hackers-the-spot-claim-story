@@ -17,7 +17,7 @@ fn main() {
          let res = client.get("http://169.254.169.254/latest/meta-data/spot/termination-time").send();
          match res {
              Ok(res) => {
-                 if res.status().as_u16() >= 200 && res.status().as_u16() < 300 {
+                 if res.status().as_u16() != 404 {
                      println!("{}", plot.pop().unwrap());
                      println!("{}", plot.pop().unwrap());
                      break;
