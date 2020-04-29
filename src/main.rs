@@ -8,7 +8,7 @@ fn main() {
     let mut plot = plot_line();
 
     // Start story plot.
-    println!("{}", plot.pop().unwrap());
+    println!("{}", plot.remove(0));
 
     // Monitor if they know your in.
     loop {
@@ -17,9 +17,16 @@ fn main() {
          let res = client.get("http://169.254.169.254/latest/meta-data/spot/termination-time").send();
          match res {
              Ok(res) => {
-                 if res.status().as_u16() == 404 {
-                     println!("{}", plot.pop().unwrap());
-                     println!("{}", plot.pop().unwrap());
+                 if res.status().as_u16() != 404 {
+                     println!("{}", plot.remove(0));
+                     println!("{}", plot.remove(0));
+
+                     // Begin getting the fuck out of Dodge.
+                     for _ in 1..15 {
+                         println!("{}", plot.remove(0));
+                         thread::sleep(ten_millis);
+                     }
+
                      break;
                  }
              },
@@ -27,12 +34,6 @@ fn main() {
                  println!(".");
              },
          }
-    }
-
-    // Begin getting the fuck out of Dodge.
-    for _ in 1..15 {
-        println!("{}", plot.pop().unwrap());
-        thread::sleep(ten_millis);
     }
 }
 
