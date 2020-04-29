@@ -1,6 +1,6 @@
 # HACKERS: The Spot Claim Story
 
-This is a proof of concept daemon.  It purpose is to poll the instance so it knows when a termination notice has been issued.  It uses the 2 minute termination window to slowly explain the plot behind the movie HACKERS but in reference to our spot claim story.
+This is a proof of concept daemon.  Its purpose is to poll the instance so it knows when a termination notice has been issued.  It uses the 2 minute termination window to slowly explain the plot behind the movie HACKERS but in reference to our spot claim story.
 
 ## Build
 
