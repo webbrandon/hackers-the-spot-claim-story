@@ -1,4 +1,5 @@
 #!/bin/bash
 sudo yum update
 sudo yum install hibagent
+sudo yum install gcc
 /usr/bin/enable-ec2-spot-hibernation
