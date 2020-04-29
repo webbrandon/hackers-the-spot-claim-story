@@ -4,7 +4,7 @@ use std::{thread, time};
 
 // Hackers: The Spot Claim Request Story Plot
 fn main() {
-    let ten_millis = time::Duration::from_millis(8);
+    let five_seconds = time::Duration::from_secs(5);
     let mut plot = plot_line();
 
     // Start story plot.
@@ -24,7 +24,7 @@ fn main() {
                      // Begin getting the fuck out of Dodge.
                      for _ in 1..15 {
                          println!("{}", plot.remove(0));
-                         thread::sleep(ten_millis);
+                         thread::sleep(five_seconds);
                      }
 
                      break;
