@@ -17,7 +17,7 @@ fn main() {
          let res = client.get("http://169.254.169.254/latest/meta-data/spot/termination-time").send();
          match res {
              Ok(res) => {
-                 if res.status().as_u16() != 404 {
+                 if res.status().as_u16() == 404 {
                      println!("{}", plot.pop().unwrap());
                      println!("{}", plot.pop().unwrap());
                      break;
@@ -27,14 +27,6 @@ fn main() {
                  println!(".");
              },
          }
-
-
-        // They know we're in and now they are coming for us.
-        if true {
-            println!("{}", plot.pop().unwrap());
-            println!("{}", plot.pop().unwrap());
-            break;
-        }
     }
 
     // Begin getting the fuck out of Dodge.

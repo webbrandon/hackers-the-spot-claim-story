@@ -1,6 +1,6 @@
 [package]
 name = "hackers-the-spot-claim-story"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["Brandon Clark <brandon.clark@gimbal.com>"]
 edition = "2018"
 
